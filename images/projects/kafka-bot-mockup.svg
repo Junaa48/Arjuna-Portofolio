@@ -1,0 +1,138 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" width="960" height="600" role="img" aria-labelledby="kafka-title kafka-desc">
+  <title id="kafka-title">Kafka WhatsApp Bot with AI Agent UI Mockup</title>
+  <desc id="kafka-desc">Mockup showing WhatsApp AI conversation powered by LangGraph tool routing, confirmation guardrails, document export, and web admin panel telemetry.</desc>
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="55%" stop-color="#1E1B4B"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7E74F1"/>
+      <stop offset="100%" stop-color="#22C55E"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#020617" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+
+  <!-- Canvas Background -->
+  <rect width="960" height="600" fill="url(#bgGrad)"/>
+  <circle cx="140" cy="110" r="180" fill="#7E74F1" opacity="0.14"/>
+  <circle cx="830" cy="500" r="200" fill="#22C55E" opacity="0.10"/>
+
+  <!-- Subtle Dot Pattern -->
+  <g fill="#94A3B8" opacity="0.12">
+    <circle cx="60" cy="60" r="2"/><circle cx="100" cy="60" r="2"/><circle cx="140" cy="60" r="2"/>
+    <circle cx="60" cy="100" r="2"/><circle cx="100" cy="100" r="2"/><circle cx="140" cy="100" r="2"/>
+    <circle cx="820" cy="80" r="2"/><circle cx="860" cy="80" r="2"/><circle cx="900" cy="80" r="2"/>
+    <circle cx="820" cy="120" r="2"/><circle cx="860" cy="120" r="2"/><circle cx="900" cy="120" r="2"/>
+  </g>
+
+  <!-- Left: WhatsApp Chat Frame -->
+  <g filter="url(#shadow)">
+    <rect x="44" y="42" width="520" height="516" rx="22" fill="#0B141A" stroke="#334155" stroke-width="1.5"/>
+    <!-- Chat Header -->
+    <path d="M44 64 a22 22 0 0 1 22 -22 h476 a22 22 0 0 1 22 22 v52 h-520 z" fill="#1F2C34"/>
+    <circle cx="88" cy="80" r="20" fill="#7E74F1"/>
+    <text x="88" y="86" text-anchor="middle" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="700">K</text>
+    <circle cx="102" cy="95" r="5" fill="#22C55E" stroke="#1F2C34" stroke-width="2"/>
+    <text x="122" y="75" fill="#F8FAFC" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="700">Kafka AI Agent</text>
+    <text x="122" y="95" fill="#86EFAC" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="500">Online · Baileys + LangGraph</text>
+
+    <!-- Chat Status Pill -->
+    <rect x="394" y="65" width="146" height="28" rx="14" fill="#312E81" stroke="#6366F1" stroke-width="1"/>
+    <text x="467" y="83" text-anchor="middle" fill="#E0E7FF" font-family="ui-monospace, monospace" font-size="11" font-weight="600">47 Tools Ready</text>
+
+    <!-- User Message 1 -->
+    <rect x="190" y="136" width="346" height="62" rx="14" fill="#005C4B"/>
+    <text x="208" y="160" fill="#ECFDF5" font-family="system-ui, -apple-system, sans-serif" font-size="13.5" font-weight="500">@Kafka research AI agent guardrails</text>
+    <text x="208" y="180" fill="#ECFDF5" font-family="system-ui, -apple-system, sans-serif" font-size="13.5" font-weight="500">and export a structured PDF report.</text>
+    <text x="518" y="188" text-anchor="end" fill="#A7F3D0" font-family="system-ui, -apple-system, sans-serif" font-size="10">20:14</text>
+
+    <!-- LangGraph Pipeline Pill -->
+    <rect x="72" y="214" width="464" height="34" rx="10" fill="#172554" stroke="#4F46E5" stroke-width="1"/>
+    <circle cx="92" cy="231" r="4.5" fill="#818CF8"/>
+    <text x="106" y="235" fill="#C7D2FE" font-family="ui-monospace, monospace" font-size="11.5">intent -&gt; search_web -&gt; claim_filter -&gt; doc_pdf</text>
+
+    <!-- Bot Reply Card + Document -->
+    <rect x="72" y="264" width="414" height="178" rx="16" fill="#202C33" stroke="#334155" stroke-width="1"/>
+    <!-- Satori Document Attachment Preview -->
+    <rect x="86" y="278" width="386" height="68" rx="10" fill="#111B21" stroke="#2A3942" stroke-width="1"/>
+    <rect x="98" y="290" width="40" height="44" rx="8" fill="#EF4444" opacity="0.2" stroke="#F87171" stroke-width="1"/>
+    <text x="118" y="317" text-anchor="middle" fill="#FCA5A5" font-family="ui-monospace, monospace" font-size="11" font-weight="700">PDF</text>
+    <text x="150" y="308" fill="#F1F5F9" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700">AI_Agent_Guardrails_Report.pdf</text>
+    <text x="150" y="327" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="11.5">6 pages · Verified claims · Satori + Sharp</text>
+
+    <text x="88" y="370" fill="#E2E8F0" font-family="system-ui, -apple-system, sans-serif" font-size="13">Here is your grounded summary with 5 verified</text>
+    <text x="88" y="390" fill="#E2E8F0" font-family="system-ui, -apple-system, sans-serif" font-size="13">sources. Unverified claims were filtered out.</text>
+
+    <!-- Interactive Reply Chips -->
+    <rect x="88" y="406" width="116" height="24" rx="8" fill="#1E293B" stroke="#475569" stroke-width="1"/>
+    <text x="146" y="422" text-anchor="middle" fill="#93C5FD" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600">Export PPTX</text>
+    <rect x="212" y="406" width="124" height="24" rx="8" fill="#1E293B" stroke="#475569" stroke-width="1"/>
+    <text x="274" y="422" text-anchor="middle" fill="#86EFAC" font-family="system-ui, -apple-system, sans-serif" font-size="11" font-weight="600">Confirm Action</text>
+
+    <!-- User Message 2 / Confirmation Guardrail -->
+    <rect x="218" y="458" width="318" height="44" rx="14" fill="#005C4B"/>
+    <text x="236" y="484" fill="#ECFDF5" font-family="system-ui, -apple-system, sans-serif" font-size="13">@Kafka create presentation deck too</text>
+    <text x="520" y="492" text-anchor="end" fill="#A7F3D0" font-family="system-ui, -apple-system, sans-serif" font-size="10">20:15</text>
+
+    <!-- Input Bar -->
+    <rect x="62" y="514" width="484" height="32" rx="16" fill="#2A3942"/>
+    <text x="84" y="534" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="12">Type a message or /menu...</text>
+    <circle cx="528" cy="530" r="11" fill="#22C55E"/>
+  </g>
+
+  <!-- Right Top: Agent Architecture Card -->
+  <g filter="url(#shadow)">
+    <rect x="592" y="42" width="324" height="246" rx="20" fill="url(#cardGrad)" stroke="#334155" stroke-width="1.5"/>
+    <rect x="592" y="42" width="324" height="6" rx="3" fill="url(#accentGrad)"/>
+    <text x="618" y="80" fill="#A5B4FC" font-family="ui-monospace, monospace" font-size="11.5" font-weight="700">AGENT ARCHITECTURE</text>
+    <text x="618" y="106" fill="#F8FAFC" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="700">Safety &amp; Tool Engine</text>
+
+    <rect x="618" y="126" width="272" height="38" rx="10" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+    <text x="634" y="149" fill="#E2E8F0" font-family="system-ui, -apple-system, sans-serif" font-size="12.5" font-weight="600">Role-Based Permissions</text>
+    <text x="876" y="149" text-anchor="end" fill="#22C55E" font-family="ui-monospace, monospace" font-size="11">ACTIVE</text>
+
+    <rect x="618" y="174" width="272" height="38" rx="10" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+    <text x="634" y="197" fill="#E2E8F0" font-family="system-ui, -apple-system, sans-serif" font-size="12.5" font-weight="600">One-Time Confirm Flow</text>
+    <text x="876" y="197" text-anchor="end" fill="#A5B4FC" font-family="ui-monospace, monospace" font-size="11">2m TTL</text>
+
+    <rect x="618" y="222" width="272" height="38" rx="10" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+    <text x="634" y="245" fill="#E2E8F0" font-family="system-ui, -apple-system, sans-serif" font-size="12.5" font-weight="600">Claim-Support Verification</text>
+    <text x="876" y="245" text-anchor="end" fill="#38BDF8" font-family="ui-monospace, monospace" font-size="11">PYTHON</text>
+  </g>
+
+  <!-- Right Bottom: Admin Panel & Outputs Card -->
+  <g filter="url(#shadow)">
+    <rect x="592" y="312" width="324" height="246" rx="20" fill="url(#cardGrad)" stroke="#334155" stroke-width="1.5"/>
+    <text x="618" y="348" fill="#86EFAC" font-family="ui-monospace, monospace" font-size="11.5" font-weight="700">WEB ADMIN &amp; OUTPUTS</text>
+    <text x="618" y="374" fill="#F8FAFC" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="700">Multi-Format Pipeline</text>
+
+    <!-- 2x2 Mini Stat Boxes -->
+    <rect x="618" y="394" width="128" height="62" rx="12" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+    <text x="632" y="420" fill="#F8FAFC" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700">47</text>
+    <text x="632" y="440" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="11.5">AI Agent Tools</text>
+
+    <rect x="762" y="394" width="128" height="62" rx="12" fill="#0F172A" stroke="#334155" stroke-width="1"/>
+    <text x="776" y="420" fill="#F8FAFC" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700">4</text>
+    <text x="776" y="440" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="11.5">Doc Formats</text>
+
+    <!-- Format Chips -->
+    <rect x="618" y="474" width="58" height="28" rx="8" fill="#312E81"/>
+    <text x="647" y="492" text-anchor="middle" fill="#E0E7FF" font-family="ui-monospace, monospace" font-size="11.5" font-weight="700">PDF</text>
+    <rect x="684" y="474" width="64" height="28" rx="8" fill="#1E3A8A"/>
+    <text x="716" y="492" text-anchor="middle" fill="#DBEAFE" font-family="ui-monospace, monospace" font-size="11.5" font-weight="700">DOCX</text>
+    <rect x="756" y="474" width="64" height="28" rx="8" fill="#7C2D12"/>
+    <text x="788" y="492" text-anchor="middle" fill="#FFEDD5" font-family="ui-monospace, monospace" font-size="11.5" font-weight="700">PPTX</text>
+    <rect x="828" y="474" width="62" height="28" rx="8" fill="#14532D"/>
+    <text x="859" y="492" text-anchor="middle" fill="#DCFCE7" font-family="ui-monospace, monospace" font-size="11.5" font-weight="700">XLSX</text>
+
+    <text x="618" y="534" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="12">Express Admin · Scoped Memory · Satori Cards</text>
+  </g>
+</svg>
