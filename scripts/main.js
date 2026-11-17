@@ -640,7 +640,7 @@ function settleReveal(el) {
 	};
 
 	el.addEventListener('transitionend', onEnd);
-	window.setTimeout(finish, 950);
+	window.setTimeout(finish, 1350);
 }
 
 /** Reveal sections and grid items on scroll while keeping off-JS and reduced-motion states visible. */
@@ -676,7 +676,7 @@ function initScrollReveal() {
 				instance.unobserve(entry.target);
 			});
 		},
-		{ root: null, rootMargin: '0px', threshold: 0.08 }
+		{ root: null, rootMargin: '0px 0px -48px 0px', threshold: 0.14 }
 	);
 
 	const checkScrolledPastOrBottom = () => {
@@ -693,7 +693,7 @@ function initScrollReveal() {
 			if (rect.bottom <= 0) {
 				revealNow(el, true);
 				observer.unobserve(el);
-			} else if (nearBottom || rect.top <= window.innerHeight * 0.94) {
+			} else if (nearBottom || rect.top <= window.innerHeight * 0.85) {
 				revealNow(el);
 				observer.unobserve(el);
 			}

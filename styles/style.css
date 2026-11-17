@@ -22,6 +22,7 @@
     --shadow-console: 0 20px 44px rgba(15, 23, 42, 0.14);
     --shadow-modal: 0 24px 55px rgba(15, 23, 42, 0.18);
     --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+    --ease-motion: cubic-bezier(0.22, 1, 0.36, 1);
     --section-padding: 4.75rem 0;
 }
 
@@ -349,14 +350,14 @@ nav ul {
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
-    transition: opacity 0.3s var(--ease-out), visibility 0s linear 0.3s;
+    transition: opacity 0.38s var(--ease-motion), visibility 0s linear 0.38s;
 }
 
 .nav-backdrop.active {
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
-    transition: opacity 0.3s var(--ease-out), visibility 0s;
+    transition: opacity 0.38s var(--ease-motion), visibility 0s;
 }
 
 /* Hero Section */
@@ -382,7 +383,7 @@ nav ul {
     line-height: 1.13;
     letter-spacing: -0.03em;
     margin-bottom: 1.2rem;
-    animation: heroElementIn 0.56s var(--ease-out) both;
+    animation: heroElementIn 0.8s var(--ease-motion) both;
 }
 
 .accent-text {
@@ -394,14 +395,14 @@ nav ul {
     line-height: 1.7;
     max-width: 56ch;
     margin-bottom: 2rem;
-    animation: heroElementIn 0.56s var(--ease-out) 0.08s both;
+    animation: heroElementIn 0.8s var(--ease-motion) 0.12s both;
 }
 
 .hero-actions {
     display: flex;
     flex-wrap: wrap;
     gap: 0.85rem;
-    animation: heroElementIn 0.56s var(--ease-out) 0.16s both;
+    animation: heroElementIn 0.8s var(--ease-motion) 0.24s both;
 }
 
 /* Interactive Hero Stack Console */
@@ -412,7 +413,7 @@ nav ul {
     border: 1px solid #1e293b;
     box-shadow: var(--shadow-console);
     overflow: hidden;
-    animation: heroConsoleIn 0.64s var(--ease-out) 0.12s both;
+    animation: heroConsoleIn 0.9s var(--ease-motion) 0.18s both;
 }
 
 .console-header {
@@ -474,7 +475,7 @@ nav ul {
 }
 
 .console-body.is-switching pre {
-    animation: consoleCodeIn 0.22s var(--ease-out) both;
+    animation: consoleCodeIn 0.35s var(--ease-motion) both;
 }
 
 .code-key { color: #93c5fd; }
@@ -551,7 +552,7 @@ nav ul {
     border: 1px solid var(--border);
     border-radius: var(--radius-md);
     overflow: hidden;
-    transition: border-color 0.2s var(--ease-out), transform 0.25s var(--ease-out);
+    transition: border-color 0.25s var(--ease-out), transform 0.32s var(--ease-out);
 }
 
 .project-card.is-hidden {
@@ -559,7 +560,7 @@ nav ul {
 }
 
 .project-card.filter-enter {
-    animation: cardFilterIn 0.28s var(--ease-out) both;
+    animation: cardFilterIn 0.42s var(--ease-motion) both;
 }
 
 .project-card:hover {
@@ -584,7 +585,7 @@ nav ul {
     height: 100%;
     object-fit: cover;
     object-position: top center;
-    transition: transform 0.4s var(--ease-out);
+    transition: transform 0.5s var(--ease-motion);
 }
 
 .project-card:hover .project-preview .preview-main {
@@ -610,7 +611,7 @@ nav ul {
     border: 3px solid #0f172a;
     background: #0f172a;
     overflow: hidden;
-    transition: transform 0.3s var(--ease-out);
+    transition: transform 0.38s var(--ease-motion);
 }
 
 .preview-phone-frame img {
@@ -854,7 +855,7 @@ nav ul {
 }
 
 .form-status:not([hidden]) {
-    animation: statusBannerIn 0.24s var(--ease-out) both;
+    animation: statusBannerIn 0.32s var(--ease-motion) both;
 }
 
 .form-status svg {
@@ -935,7 +936,7 @@ a.contact-row:hover h3 {
 }
 
 .modal:not([hidden]) .modal-backdrop {
-    animation: modalBackdropIn 0.22s var(--ease-out) both;
+    animation: modalBackdropIn 0.32s var(--ease-motion) both;
 }
 
 .modal-dialog {
@@ -954,7 +955,7 @@ a.contact-row:hover h3 {
 }
 
 .modal:not([hidden]) .modal-dialog {
-    animation: modalDialogIn 0.3s var(--ease-out) both;
+    animation: modalDialogIn 0.42s var(--ease-motion) both;
 }
 
 .modal-close {
@@ -1008,7 +1009,7 @@ a.contact-row:hover h3 {
     object-fit: contain;
     border-radius: var(--radius-sm);
     background: #020617;
-    animation: galleryImageIn 0.22s var(--ease-out) both;
+    animation: galleryImageIn 0.34s var(--ease-motion) both;
 }
 
 .modal-gallery-tabs {
@@ -1145,7 +1146,7 @@ a.contact-row:hover h3 {
 @keyframes heroElementIn {
     from {
         opacity: 0;
-        transform: translateY(16px);
+        transform: translateY(22px);
     }
     to {
         opacity: 1;
@@ -1156,7 +1157,7 @@ a.contact-row:hover h3 {
 @keyframes heroConsoleIn {
     from {
         opacity: 0;
-        transform: translate3d(18px, 14px, 0) scale(0.985);
+        transform: translate3d(24px, 16px, 0) scale(0.98);
     }
     to {
         opacity: 1;
@@ -1167,7 +1168,7 @@ a.contact-row:hover h3 {
 @keyframes consoleCodeIn {
     from {
         opacity: 0;
-        transform: translateY(6px);
+        transform: translateY(8px);
     }
     to {
         opacity: 1;
@@ -1178,7 +1179,7 @@ a.contact-row:hover h3 {
 @keyframes cardFilterIn {
     from {
         opacity: 0;
-        transform: translateY(10px);
+        transform: translateY(14px);
     }
     to {
         opacity: 1;
@@ -1189,7 +1190,7 @@ a.contact-row:hover h3 {
 @keyframes statusBannerIn {
     from {
         opacity: 0;
-        transform: translateY(4px);
+        transform: translateY(6px);
     }
     to {
         opacity: 1;
@@ -1209,7 +1210,7 @@ a.contact-row:hover h3 {
 @keyframes modalDialogIn {
     from {
         opacity: 0;
-        transform: translateY(16px) scale(0.985);
+        transform: translateY(20px) scale(0.975);
     }
     to {
         opacity: 1;
@@ -1220,7 +1221,7 @@ a.contact-row:hover h3 {
 @keyframes galleryImageIn {
     from {
         opacity: 0;
-        transform: scale(0.985);
+        transform: scale(0.975);
     }
     to {
         opacity: 1;
@@ -1239,19 +1240,19 @@ a.contact-row:hover h3 {
 
 html.js-anim .reveal:not(.reveal-settled) {
     opacity: 0;
-    transition: opacity 0.6s var(--ease-out), transform 0.6s var(--ease-out);
+    transition: opacity 0.82s var(--ease-motion), transform 0.82s var(--ease-motion);
 }
 
 html.js-anim .reveal.reveal-up:not(.reveal-settled) {
-    transform: translateY(24px);
+    transform: translateY(30px);
 }
 
 html.js-anim .reveal.reveal-left:not(.reveal-settled) {
-    transform: translateX(-28px);
+    transform: translateX(-34px);
 }
 
 html.js-anim .reveal.reveal-right:not(.reveal-settled) {
-    transform: translateX(28px);
+    transform: translateX(34px);
 }
 
 html.js-anim .reveal.show-anim:not(.reveal-settled) {
@@ -1260,15 +1261,15 @@ html.js-anim .reveal.show-anim:not(.reveal-settled) {
 }
 
 html.js-anim .reveal.delay-1:not(.reveal-settled) {
-    transition-delay: 0.07s;
+    transition-delay: 0.1s;
 }
 
 html.js-anim .reveal.delay-2:not(.reveal-settled) {
-    transition-delay: 0.14s;
+    transition-delay: 0.22s;
 }
 
 html.js-anim .reveal.delay-3:not(.reveal-settled) {
-    transition-delay: 0.21s;
+    transition-delay: 0.34s;
 }
 
 @media (hover: none) {
