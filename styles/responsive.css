@@ -1,31 +1,58 @@
 @media screen and (max-width: 1024px) {
     :root {
-        --section-padding: 4.5rem 0;
+        --section-padding: 4rem 0;
     }
 
     #hero {
-        grid-template-columns: 1fr;
-        gap: 2.5rem;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 2.25rem;
     }
 
-    .grid-3,
     .projects-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .project-card {
+        display: grid;
+        grid-template-columns: minmax(220px, 38%) minmax(0, 1fr);
+    }
+
+    .project-preview {
+        height: 100%;
+        min-height: 220px;
+        border-bottom: none;
+        border-right: 1px solid var(--border);
     }
 
     .skills-layout,
     .contact-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 2.25rem;
+    }
+
+    .education-block {
+        margin-top: 0.25rem;
     }
 }
 
 @media screen and (max-width: 860px) {
+    .expertise-list {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 1.65rem;
+    }
+
     .burger {
-        display: block;
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        width: 44px;
+        height: 44px;
     }
 
     .burger.toggle-burger span:nth-child(1) {
-        transform: rotate(-45deg) translate(-5px, 5px);
+        transform: translateY(7px) rotate(-45deg);
     }
 
     .burger.toggle-burger span:nth-child(2) {
@@ -33,84 +60,151 @@
     }
 
     .burger.toggle-burger span:nth-child(3) {
-        transform: rotate(45deg) translate(-5px, -5px);
+        transform: translateY(-7px) rotate(45deg);
     }
 
     nav {
         position: fixed;
         top: 0;
         right: 0;
-        width: min(300px, 78vw);
+        width: min(300px, 82vw);
         height: 100vh;
+        height: 100dvh;
+        overflow-y: auto;
         flex-direction: column;
-        justify-content: center;
-        gap: 2rem;
+        justify-content: flex-start;
+        gap: 1.75rem;
         background: var(--surface);
         border-left: 1px solid var(--border);
-        box-shadow: var(--shadow-lg);
-        padding: 2rem;
+        box-shadow: var(--shadow-modal);
+        padding: 4.5rem 1.75rem 2rem;
         z-index: 60;
+        visibility: hidden;
         transform: translateX(100%);
-        transition: transform 0.35s ease;
+        transition: transform 0.3s var(--ease-out), visibility 0s linear 0.3s;
     }
 
     nav.nav-active {
+        visibility: visible;
         transform: translateX(0);
+        transition: transform 0.3s var(--ease-out), visibility 0s;
     }
 
     nav ul {
         flex-direction: column;
-        gap: 1.5rem;
+        gap: 1.15rem;
+        margin-top: auto;
+    }
+
+    nav .nav-cta {
+        margin-bottom: auto;
     }
 
     .nav-link {
-        font-size: 1.1rem;
+        display: inline-block;
+        padding: 0.35rem 0;
+        font-size: 1.05rem;
     }
 
     .modal-dialog {
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(0, 1fr);
+        overflow-y: auto;
     }
 
-    .modal-gallery img {
-        max-height: 260px;
+    .modal-gallery {
+        padding: 3.5rem 1rem 1rem;
+    }
+
+    .modal-image-slot {
+        aspect-ratio: 16 / 10;
+        max-height: 220px;
+    }
+
+    .modal-content {
+        max-height: none;
+        overflow-y: visible;
+    }
+
+    .modal-content h2 {
+        padding-right: 0;
+    }
+
+    html.js-anim .reveal.reveal-left:not(.reveal-settled),
+    html.js-anim .reveal.reveal-right:not(.reveal-settled) {
+        transform: translateY(20px);
     }
 }
 
 @media screen and (max-width: 640px) {
     :root {
-        --section-padding: 3.75rem 0;
+        --section-padding: 3.25rem 0;
     }
 
     .hero-header {
-        padding: 3rem 0 4rem;
+        padding: 2.75rem 0 3.25rem;
     }
 
-    .grid-3,
-    .projects-grid {
-        grid-template-columns: 1fr;
+    .hero-bio {
+        font-size: 0.98rem;
+        margin-bottom: 1.65rem;
     }
 
-    .hero-metrics {
-        gap: 1rem;
+    .section-head-row {
+        gap: 0.9rem;
+        margin-bottom: 1.75rem;
     }
 
-    .metric-divider {
-        display: none;
+    .project-card {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .project-preview {
+        height: clamp(190px, 48vw, 250px);
+        min-height: 0;
+        border-right: none;
+        border-bottom: 1px solid var(--border);
     }
 
     .contact-form,
     .modal-content {
-        padding: 1.4rem;
+        padding: 1.35rem;
+    }
+
+    .modal {
+        padding: 0.75rem;
+    }
+
+    .modal-dialog {
+        max-height: 92vh;
+        max-height: 92dvh;
+    }
+
+    .modal-gallery {
+        padding: 3.5rem 0.9rem 0.9rem;
+    }
+
+    .footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
     }
 }
 
 @media screen and (max-width: 380px) {
     .main-container {
-        width: 92%;
+        width: calc(100% - 1.75rem);
+    }
+
+    .nav-wrapper {
+        padding: 0.55rem 0.875rem;
     }
 
     .hero-actions .btn {
         width: 100%;
+    }
+
+    .console-header {
+        padding: 0.75rem 0.95rem;
     }
 
     .console-body {
@@ -119,7 +213,31 @@
     }
 
     .preview-phone-frame {
-        width: 78px;
+        width: 74px;
         right: 10px;
+    }
+}
+
+@media screen and (max-height: 500px) and (orientation: landscape) {
+    .hero-header {
+        padding: 2rem 0 2.5rem;
+    }
+
+    .modal-dialog {
+        max-height: 94vh;
+        max-height: 94dvh;
+    }
+}
+
+@media screen and (max-width: 860px) and (prefers-reduced-motion: reduce) {
+    nav {
+        transform: none;
+        opacity: 0;
+        transition: opacity 0.18s ease, visibility 0s linear 0.18s;
+    }
+
+    nav.nav-active {
+        opacity: 1;
+        transition: opacity 0.18s ease, visibility 0s;
     }
 }
